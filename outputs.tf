@@ -3,5 +3,5 @@ output "deployment_stage_name" {
 }
 
 output "invoke_url" {
-  value = aws_api_gateway_deployment.deployment.invoke_url
+  value = aws_api_gateway_stage.stage.invoke_url
 }
