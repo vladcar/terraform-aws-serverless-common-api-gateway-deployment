@@ -23,3 +23,9 @@ variable "base_path" {
   default     = null
   description = "Path segment that must be prepended to the path when accessing the API via this custom_domain_name"
 }
+
+variable "include_stage_in_custom_domain" {
+  type        = bool
+  default     = true
+  description = "Whether to associate base path mapping with deployment stage specified in 'stage' variable of this module. If omitted, callers may select any stage by including its name as a path element after the base path."
+}
